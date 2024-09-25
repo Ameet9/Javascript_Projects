@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(white, rgb(186, 137, 224));
+}
+.cardDiv {
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+.cardList .cardItem {
+  list-style: none;
+}
+.cardList .cardItem .cardLink {
+  user-select: none;
+  /* width: 400px; */
+  display: block;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: all ease 0.2s;
+}
+.cardList .cardItem .cardLink:active {
+  cursor: grabbing;
+}
+.cardList .cardItem .cardLink:hover {
+  border-color: rgb(186, 137, 224);
+}
+.cardList .cardLink .cardImage {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cardList .cardLink .badge {
+  color: blue;
+  background: lightblue;
+  margin: 16px 0 18px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 50px;
+}
+.cardList .cardLink .badge.Singer {
+  color: rgb(173, 97, 110);
+  background: lightpink;
+}
+.cardList .cardLink .badge.Content {
+  color: blue;
+  background: lightblue;
+}
+.cardList .cardLink .badge.Manager {
+  color: brown;
+  background: lightyellow;
+}
+.cardList .cardLink .badge.Writer {
+  color: green;
+  background: lightgreen;
+}
+.cardList .cardLink .badge.Team {
+  color: orangered;
+  background: rgb(241, 197, 114);
+}
+.cardList .cardLink .badge.Developer {
+  color: purple;
+  background: rgb(255, 145, 255);
+}
+.cardList .cardLink .cardTitle {
+  font-size: 1.19rem;
+  color: black;
+  font-weight: 600;
+}
+.cardList .cardLink .cardButton {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  border: 2px solid blue;
+  color: blue;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  transition: all ease 0.4s;
+}
+.cardList .cardLink:hover .cardButton {
+  color: white;
+  background: blue;
+}
+.cardDiv .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: blue;
+}
+.cardDiv .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.cardDiv .swiperSliderButton {
+  color: blue;
+  margin-top: -35px;
+}
+@media screen and (max-width: 768px) {
+  .cardDiv {
+    margin: 0 10px 25px;
+  }
+  .cardDiv .swiperSliderButton {
+    display: none;
+  }
+}
