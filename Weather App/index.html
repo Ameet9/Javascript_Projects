@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="searchSection">
+        <div class="inputWrapper">
+          <span class="material-symbols-rounded">search</span>
+          <input
+            type="search"
+            class="searchInput"
+            placeholder="Enter a City Name"
+          />
+        </div>
+        <button class="locationButton">
+          <span class="material-symbols-rounded"> my_location </span>
+        </button>
+      </div>
+      <div class="weatherSection">
+        <div class="currentWeather">
+          <img src="icons/clouds.svg" class="weatherIcon" />
+          <h2 class="temperature">20<span>°C</span></h2>
+          <p class="description">Partly cloudy</p>
+        </div>
+        <div class="hourlyWeather">
+          <ul class="weatherList">
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+            <li class="weatherItem">
+              <p class="time">00:00</p>
+              <img src="icons/clouds.svg" class="weatherIcon" />
+              <p class="temperature">20°C</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

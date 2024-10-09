@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: rgb(224, 202, 173);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 425px;
+  flex-grow: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.searchSection {
+  display: flex;
+  padding: 25px;
+  gap: 10px;
+  align-items: center;
+}
+.searchSection .inputWrapper {
+  height: 54px;
+  width: 100%;
+  position: relative;
+}
+.searchSection .inputWrapper span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  left: 17px;
+}
+.searchSection .searchInput {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(224, 202, 173);
+  border-radius: 6px;
+  padding: 0 20px 0 50px;
+  outline: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.1s ease;
+}
+.searchSection .searchInput:focus {
+  border-color: blue;
+}
+.searchSection .searchInput::placeholder {
+  text-transform: none;
+}
+.searchSection .locationButton {
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  color: blue;
+  border-radius: 6px;
+  border: 1px solid rgb(224, 202, 173);
+  transition: 0.3s ease;
+}
+.searchSection .locationButton:hover {
+  color: white;
+  background: blue;
+  border-color: blue;
+}
+.searchSection .locationButton span {
+  font-size: 1.3rem;
+}
+.weatherSection .currentWeather {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 50px;
+  flex-direction: column;
+}
+.currentWeather .weatherIcon {
+  width: 140px;
+  aspect-ratio: 1;
+}
+.currentWeather .temperature {
+  font-size: 3.38rem;
+  margin: 23px 0;
+  display: flex;
+}
+.currentWeather .temperature span {
+  font-size: 1.56rem;
+  font-weight: 500;
+  margin: 5px 0 0 2px;
+}
+.currentWeather .description {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.hourlyWeather {
+  padding: 16px 25px;
+  border-top: 1px solid rgb(184, 184, 184);
+}
+.hourlyWeather .weatherList {
+  display: flex;
+  list-style: none;
+  gap: 43px;
+  padding-bottom: 16px;
+  margin-bottom: -16px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.hourlyWeather:hover .weatherList {
+  scrollbar-color: rgb(210, 210, 210) transparent;
+}
+.hourlyWeather .weatherItem {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 500;
+  align-items: center;
+}
+.hourlyWeather .weatherItem .weatherIcon {
+  width: 28px;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 624px) {
+  body {
+    padding: 15px;
+  }
+  .searchSection {
+    padding: 20px;
+  }
+  .hourlyWeather {
+    padding: 16px 20px;
+  }
+  .hourlyWeather .weatherList {
+    gap: 32px;
+  }
+}
