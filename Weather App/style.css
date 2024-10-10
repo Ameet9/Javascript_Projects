@@ -17,6 +17,8 @@ body {
   border-radius: 10px;
   max-width: 425px;
   flex-grow: 1;
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .searchSection {
@@ -78,6 +80,32 @@ body {
 .searchSection .locationButton span {
   font-size: 1.3rem;
 }
+.noResults {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+body .showNoResults .noResults {
+  display: flex;
+}
+.noResults .title {
+  margin: 25px 0 15px;
+}
+.noResults .message {
+  font-weight: 500;
+}
+body .showNoResults .weatherSection {
+  visibility: hidden;
+}
 .weatherSection .currentWeather {
   display: flex;
   align-items: center;
@@ -109,7 +137,7 @@ body {
 .hourlyWeather .weatherList {
   display: flex;
   list-style: none;
-  gap: 43px;
+  gap: 38px;
   padding-bottom: 16px;
   margin-bottom: -16px;
   overflow-x: auto;
